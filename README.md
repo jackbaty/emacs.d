@@ -5,3 +5,7 @@ When I tire of [Doom Emacs](https://github.com/hlissner/doom-emacs) changing thi
 I become determined to go back to using my own, hand-rolled configuration
 
 This is that configuration.
+
+The defaults, layout, theme, etc are based on [Nano Emacs](https://github.com/rougier/nano-emacs).
+
+

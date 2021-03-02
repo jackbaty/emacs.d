@@ -2,7 +2,12 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("init.el"
+(("tasks.org"
+ (filename . "~/Dropbox/notes/org/tasks.org")
+ (front-context-string . "#+title: Tasks\n#")
+ (rear-context-string)
+ (position . 1))
+("init.el"
  (filename . "~/.emacs.d/init.el")
  (front-context-string . "(require 'packag")
  (rear-context-string)
