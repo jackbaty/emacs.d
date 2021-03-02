@@ -8,4 +8,3 @@ This is that configuration.
 
 The defaults, layout, theme, etc are based on [Nano Emacs](https://github.com/rougier/nano-emacs).
 
-

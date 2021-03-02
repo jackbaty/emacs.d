@@ -150,12 +150,15 @@
 
 ;;(yas-global-mode 1) ;; or M-x yas-reload-all if you've started YASnippet already.
 
+(setq evil-respect-visual-line-mode t) ;; sane j and k behavior (must be set before evil loads)
 (unless (package-installed-p 'evil)
   (package-install 'evil))
 ;; Enable Evil
 (require 'evil)
 (evil-mode 1)
 
+
+(global-visual-line-mode t)
 
 (defun jab/insert-weather ()
   "Use wttr to insert the current weather at point"

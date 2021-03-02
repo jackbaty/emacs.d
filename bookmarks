@@ -2,7 +2,12 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("tasks.org"
+(("org-capture-last-stored"
+ (filename . "~/Dropbox/notes/org/tasks.org")
+ (front-context-string . "** TODO Send est")
+ (rear-context-string . "021-03-02 Tue>\n\n")
+ (position . 731))
+("tasks.org"
  (filename . "~/Dropbox/notes/org/tasks.org")
  (front-context-string . "#+title: Tasks\n#")
  (rear-context-string)
