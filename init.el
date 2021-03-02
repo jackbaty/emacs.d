@@ -42,7 +42,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages '(magit org-journal counsel)))
+ '(package-selected-packages '(evil magit org-journal counsel)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -155,5 +155,27 @@
 (setq org-journal-file-header 'org-journal-file-header-func)
 
 (add-hook 'org-journal-mode-hook 'turn-on-auto-fill)
+
+;;(setq yas-snippet-dirs
+  ;;    '("~/Dropbox/emacs/yasnippets"                 ;; personal snippets
+  ;;    ))
+
+;;(yas-global-mode 1) ;; or M-x yas-reload-all if you've started YASnippet already.
+
+(unless (package-installed-p 'evil)
+  (package-install 'evil))
+;; Enable Evil
+(require 'evil)
+(evil-mode 1)
+
+
+(defun jab/insert-weather ()
+  "Use wttr to insert the current weather at point"
+  (interactive)
+  (let ((w (shell-command-to-string "curl -s 'wttr.in/49301?0q&format=%c+%C+%t' | head -n6")))
+  (insert (mapconcat (function (lambda (x) (format ": %s" x)))
+           (split-string w "\n")
+           "\n"))))
+
 
 (load "~/.emacs.d/config/bindings.el")
