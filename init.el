@@ -5,7 +5,7 @@
 
 
 ;; Path to nano emacs modules (mandatory)
-(add-to-list 'load-path "/Users/jbaty/Dropbox/Sync/emacs-files/nano-emacs")
+(add-to-list 'load-path "/Users/jbaty/Dropbox/emacs/nano-emacs")
 (add-to-list 'load-path ".")
 
 ;; Default layout (optional)
@@ -42,7 +42,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages '(org-journal counsel)))
+ '(package-selected-packages '(magit org-journal counsel)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -73,7 +73,7 @@
 ;; Org mode
 (setq org-directory "~/Dropbox/notes/org/")
 
-(add-to-list 'load-path "~/env/emacs/lisp")
+(add-to-list 'load-path "~/Dropbox/emacs/lisp")
 (add-to-list 'default-frame-alist '(height . 60))
 (add-to-list 'default-frame-alist '(width . 120))
 
@@ -108,7 +108,7 @@
       "* %i%? \n %U\n" :empty-lines 1 :prepend t)))
 
 (add-hook 'org-mode-hook 'turn-on-auto-fill)
-(add-hook 'org-mode-hook #'turn-off-smartparens-mode)
+;;(add-hook 'org-mode-hook #'turn-off-smartparens-mode)
 
 ;; Attach dragged files relative to current directory
 (setq org-attach-id-dir "./attach")
@@ -155,3 +155,5 @@
 (setq org-journal-file-header 'org-journal-file-header-func)
 
 (add-hook 'org-journal-mode-hook 'turn-on-auto-fill)
+
+(load "~/.emacs.d/config/bindings.el")
