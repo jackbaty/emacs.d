@@ -6,7 +6,7 @@
 
 ;; Path to nano emacs modules (mandatory)
 (add-to-list 'load-path "/Users/jbaty/Dropbox/emacs/nano-emacs")
-(add-to-list 'load-path ".")
+;;(add-to-list 'load-path ".")
 
 ;; Default layout (optional)
 (require 'nano-layout)
